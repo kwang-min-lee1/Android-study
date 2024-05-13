@@ -28,7 +28,7 @@ class ViewEventActivity : AppCompatActivity() {
             Log.d(TAG, "체크버튼이 변경되었습니다. $isChecked")
         }
 
-        // 외부 에서 작성한 이벤트 한들러 객체를 매개변수로 받는 경우
+        // 외부 에서 작성한 이벤트 핸들러 객체를 매개변수로 받는 경우
         // binding.checkboxView.setOnCheckedChangeListener(MyHandler())
 
         binding.buttonView.setOnLongClickListener {
