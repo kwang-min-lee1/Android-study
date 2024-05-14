@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+<!-- 클립아트 아이콘 추가하기
+    (리소스 디렉토리, 리소스 매니져, ImageView 창에서)
+    - New Vector Asset > Icon 탭에서 Clip Art 선택
+    - 기본 제공 아이콘을 drawable 로 추가 가능
+
+    - 외부 아이콘 사용하기
+        - 구글 materiel icon
+        - https://fonts.google.com/icons
+        - New Vector Asset > Icon > Local File
+
+-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/access_alarm_24" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/add_a_photo"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/noteicon"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/arrow_downward_24dp_fill0_wght400_grad0_opsz24"
+        android:layout_weight="1"
+        />
+
+
+
+</LinearLayout>
