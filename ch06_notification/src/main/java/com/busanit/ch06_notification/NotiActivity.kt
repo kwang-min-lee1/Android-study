@@ -27,7 +27,7 @@ class NotiActivity : AppCompatActivity() {
                         // 권한이 허용되었으면 알림
                             notification()
                         } else {
-                            // 거부 되었으면
+                            // 거부 되었으면 토스트
                             Toast.makeText(this,"권한이 거부되었습니다.",Toast.LENGTH_SHORT).show()
                         }
                     }
