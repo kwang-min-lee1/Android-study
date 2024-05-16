@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/darker_gray"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/snackbar_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="커스텀 스낵바"
+        android:textColor="#FFF"/>
+
+    <Button
+        android:id="@+id/action_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:textColor="@color/black"
+        android:text="ACT1"/>
+
+    <Button
+        android:id="@+id/action_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACT2"/>
+
+</LinearLayout>

@@ -30,6 +30,8 @@ class Permission1Activity : AppCompatActivity() {
 
         // 퍼미션(권한) 상태 확인하기
         val permissionStatus = ContextCompat.checkSelfPermission(
+            // val permissionStatus = 0 도 같은 의미다.
+
             this, "android.permission.ACCESS_FINE_LOCATION"
         )
 
