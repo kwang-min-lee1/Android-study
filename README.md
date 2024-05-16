@@ -457,7 +457,6 @@ val okString = getString(android.R.string.ok)
 #### 선언 및 요청 방법
 
     1. 권한 선언: `AndroidManifest.xml` 파일에 위험 권한을 선언합니다.
-
 ```xml
     <manifest xmlns:android="<http://schemas.android.com/apk/res/android>"
         package="com.busanit.myfirstapp">
@@ -471,7 +470,6 @@ val okString = getString(android.R.string.ok)
 ```
 
     2. 권한 요청: 앱 실행 중에 권한을 요청합니다. 예를 들어, 위치 권한을 요청하려면 아래와 같이 작성합니다.
-
 ```kotlin
     import android.Manifest
     import android.content.pm.PackageManager
