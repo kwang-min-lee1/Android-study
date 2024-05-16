@@ -74,3 +74,4 @@ class NotiActivity : AppCompatActivity() {
         notificationManager.notify(11,builder.build())
     }
 }
+// 참고[알람만들기]: https://developer.android.com/develop/ui/views/notifications/build-notification?hl=ko
