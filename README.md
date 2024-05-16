@@ -435,7 +435,7 @@ val okString = getString(android.R.string.ok)
 
 ```
 
-    ### 2. 위험 권한 (Dangerous Permissions)
+### 2. 위험 권한 (Dangerous Permissions)
 
     위험 권한은 민감한 데이터나 장치 기능에 접근할 때 필요한 권한입니다. 이러한 권한들은 사용자의 개인 정보나 장치 보안에 큰 영향을 미칠 수 있기 때문에, 
     사용자가 명시적으로 허가해야 합니다. 앱 실행 중에 사용자가 허가를 승인하거나 거부할 수 있습니다.
@@ -447,14 +447,14 @@ val okString = getString(android.R.string.ok)
         - 연락처 접근 권한 (`READ_CONTACTS`, `WRITE_CONTACTS`)
         - 저장소 접근 권한 (`READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`)
 
-    ### 권한 요청 처리 절차
+### 권한 요청 처리 절차
 
     1. 권한 선언: `AndroidManifest.xml` 파일에 필요한 권한을 선언합니다.
     2. 권한 확인: 앱 실행 시 `ContextCompat.checkSelfPermission()` 메서드로 권한을 확인합니다.
     3. 권한 요청: 권한이 부여되지 않은 경우 `ActivityCompat.requestPermissions()` 메서드로 사용자에게 권한을 요청합니다.
     4. 결과 처리: `onRequestPermissionsResult()` 메서드에서 권한 요청 결과를 처리합니다.
 
-    #### 선언 및 요청 방법
+#### 선언 및 요청 방법
 
     1. 권한 선언: `AndroidManifest.xml` 파일에 위험 권한을 선언합니다.
 
