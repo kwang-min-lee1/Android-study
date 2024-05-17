@@ -67,7 +67,7 @@ class NotiStyleActivity : AppCompatActivity() {
             notificationManager.notify(33,builder.build())
         }
 
-        // 긴 텍스트 스타일 버튼
+        // 긴 텍스트 스타일 알림 버튼
         binding.button3.setOnClickListener {
             val builder = getNotificationBuilder("ch3")
             val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
@@ -83,6 +83,7 @@ class NotiStyleActivity : AppCompatActivity() {
 
         }
 
+        // 받은 편지함 스타일 알림 버튼
         binding.button4.setOnClickListener {
             val builder = getNotificationBuilder("ch3")
             val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
@@ -106,6 +107,7 @@ class NotiStyleActivity : AppCompatActivity() {
 
         }
 
+        // 메시지 스타일 알림 버튼
         binding.button5.setOnClickListener {
             val builder = getNotificationBuilder("ch3")
             val notificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
