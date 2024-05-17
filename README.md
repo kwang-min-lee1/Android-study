@@ -568,6 +568,7 @@ val okString = getString(android.R.string.ok)
         - `VIBRATE`: 장치를 진동시킬 수 있는 권한
         - `WAKE_LOCK`: CPU가 슬립 모드로 들어가지 않도록 할 수 있는 권한
 
+
 ### 공식 문서 참조
 
     - [Permissions Overview](https://developer.android.com/guide/topics/permissions/overview)
@@ -578,13 +579,13 @@ val okString = getString(android.R.string.ok)
 
 ### 1 개요
 
-토스트는 사용자가 명시적으로 닫지 않아도 자동으로 사라지는 짧은 메시지입니다. 주로 간단한 알림이나 상태를 사용자에게 알려주는 데 사용됩니다.
+    토스트는 사용자가 명시적으로 닫지 않아도 자동으로 사라지는 짧은 메시지입니다. 주로 간단한 알림이나 상태를 사용자에게 알려주는 데 사용됩니다.
 
 ### 2 사용 방법
 
-- 기본 토스트: `Toast.makeText(Context, String, int).show()`
-- 위치 변경: `Toast.setGravity(int, int, int)`
-- 커스텀 토스트: 사용자 정의 레이아웃 사용
+    - 기본 토스트: `Toast.makeText(Context, String, int).show()`
+    - 위치 변경: `Toast.setGravity(int, int, int)`
+    - 커스텀 토스트: 사용자 정의 레이아웃 사용
 
 ### 3 예제 코드
 
@@ -615,7 +616,7 @@ customToast.show()
 
 ### 4 참고 자료
 
-- [Toast 공식 문서](https://developer.android.com/guide/topics/ui/notifiers/toasts)
+    - [Toast 공식 문서](https://developer.android.com/guide/topics/ui/notifiers/toasts)
 
 ---
 
@@ -623,14 +624,14 @@ customToast.show()
 
 ### 1 개요
 
-스낵바는 화면 하단에 표시되는 메시지로, 사용자에게 간단한 알림을 제공하거나 액션을 수행할 수 있는 버튼을 포함할 수 있습니다. 토스트보다 더 많은 기능과 상호작용을 제공합니다.
+    스낵바는 화면 하단에 표시되는 메시지로, 사용자에게 간단한 알림을 제공하거나 액션을 수행할 수 있는 버튼을 포함할 수 있습니다. 토스트보다 더 많은 기능과 상호작용을 제공합니다.
 
 ### 2 사용 방법
 
-- 기본 스낵바: `Snackbar.make(View, String, int).show()`
-- 액션 추가: `Snackbar.setAction(String, View.OnClickListener)`
-- 스타일 변경: `Snackbar.setActionTextColor(int)` 및 `Snackbar.view.setBackgroundColor(int)`
-- 커스텀 스낵바: 사용자 정의 레이아웃 사용
+    - 기본 스낵바: `Snackbar.make(View, String, int).show()`
+    - 액션 추가: `Snackbar.setAction(String, View.OnClickListener)`
+    - 스타일 변경: `Snackbar.setActionTextColor(int)` 및 `Snackbar.view.setBackgroundColor(int)`
+    - 커스텀 스낵바: 사용자 정의 레이아웃 사용
 
 ### 3 예제 코드
 
@@ -665,7 +666,7 @@ customSnackbar.show()
 
 ### 4 참고 자료
 
-- [Snackbar 공식 문서](https://developer.android.com/reference/com/google/android/material/snackbar/Snackbar)
+    - [Snackbar 공식 문서](https://developer.android.com/reference/com/google/android/material/snackbar/Snackbar)
 
 ---
 
@@ -673,15 +674,15 @@ customSnackbar.show()
 
 ### 1 개요
 
-다이얼로그는 사용자가 상호작용할 수 있는 팝업 창입니다. 정보를 제공하거나 사용자로부터 입력을 받을 수 있습니다. 다양한 종류의 다이얼로그가 있습니다.
+    다이얼로그는 사용자가 상호작용할 수 있는 팝업 창입니다. 정보를 제공하거나 사용자로부터 입력을 받을 수 있습니다. 다양한 종류의 다이얼로그가 있습니다.
 
 ### 2 종류 및 사용 방법
 
-- AlertDialog: 간단한 메시지나 선택지를 제공
-- DatePickerDialog: 날짜를 선택할 수 있는 다이얼로그
-- TimePickerDialog: 시간을 선택할 수 있는 다이얼로그
-- ProgressDialog: 진행 상태를 표시 (Deprecated)
-- Custom Dialog: 사용자 정의 레이아웃을 사용하는 다이얼로그
+    - AlertDialog: 간단한 메시지나 선택지를 제공
+    - DatePickerDialog: 날짜를 선택할 수 있는 다이얼로그
+    - TimePickerDialog: 시간을 선택할 수 있는 다이얼로그
+    - ProgressDialog: 진행 상태를 표시 (Deprecated)
+    - Custom Dialog: 사용자 정의 레이아웃을 사용하는 다이얼로그
 
 ### 3 예제 코드
 
@@ -730,7 +731,7 @@ customDialog.show()
 
 ### 4 참고 자료
 
-- [Dialogs 공식 문서](https://developer.android.com/guide/topics/ui/dialogs)
+    - [Dialogs 공식 문서](https://developer.android.com/guide/topics/ui/dialogs)
 
 ---
 
@@ -738,11 +739,11 @@ customDialog.show()
 
 ### 1 개요
 
-링톤(Ringtone)은 장치의 기본 알림 소리를 재생하는 기능입니다. 이를 통해 사용자에게 중요한 알림을 소리로 전달할 수 있습니다.
+    링톤(Ringtone)은 장치의 기본 알림 소리를 재생하는 기능입니다. 이를 통해 사용자에게 중요한 알림을 소리로 전달할 수 있습니다.
 
 ### 2 설정 방법
 
-링톤을 재생하려면 `RingtoneManager` 클래스를 사용합니다. 알림 소리의 URI를 가져와 `Ringtone` 객체를 생성하고, 이를 재생합니다.
+    링톤을 재생하려면 `RingtoneManager` 클래스를 사용합니다. 알림 소리의 URI를 가져와 `Ringtone` 객체를 생성하고, 이를 재생합니다.
 
 ### 3 코드 예제
 
@@ -758,9 +759,9 @@ customDialog.show()
 
 ### 4 주요 포인트
 
-- `RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)`을 사용하여 기본 알림 소리의 URI를 가져옵니다.
-- `RingtoneManager.getRingtone(context, uri)`을 사용하여 `Ringtone` 객체를 생성합니다.
-- `ringtone.play()`를 호출하여 알림 소리를 재생합니다.
+    - `RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)`을 사용하여 기본 알림 소리의 URI를 가져옵니다.
+    - `RingtoneManager.getRingtone(context, uri)`을 사용하여 `Ringtone` 객체를 생성합니다.
+    - `ringtone.play()`를 호출하여 알림 소리를 재생합니다.
 
 ---
 
@@ -768,11 +769,11 @@ customDialog.show()
 
 ### 1 개요
 
-진동(Vibrator)은 장치의 진동 기능을 활용하여 사용자에게 알림을 전달하는 기능입니다. 이를 통해 소리 없이도 중요한 알림을 전달할 수 있습니다.
+    진동(Vibrator)은 장치의 진동 기능을 활용하여 사용자에게 알림을 전달하는 기능입니다. 이를 통해 소리 없이도 중요한 알림을 전달할 수 있습니다.
 
 ### 2 설정 방법
 
-진동을 발생시키려면 `Vibrator` 클래스를 사용합니다. API 레벨에 따라 `VibratorManager`나 `Vibrator`를 사용하여 진동을 설정할 수 있습니다.
+    진동을 발생시키려면 `Vibrator` 클래스를 사용합니다. API 레벨에 따라 `VibratorManager`나 `Vibrator`를 사용하여 진동을 설정할 수 있습니다.
 
 ### 3 코드 예제
 
@@ -798,84 +799,84 @@ customDialog.show()
 
 ### 4 주요 포인트
 
-- API 31 이상에서는 `VibratorManager`를 사용하여 진동기를 가져옵니다.
-- API 26 이상에서는 `VibrationEffect`를 사용하여 진동 효과를 설정합니다.
-- `vibrator.vibrate(longArrayOf(0, 500, 1000, 500), -1)`를 사용하여 진동 패턴을 설정하고 진동을 발생시킵니다.
+    - API 31 이상에서는 `VibratorManager`를 사용하여 진동기를 가져옵니다.
+    - API 26 이상에서는 `VibrationEffect`를 사용하여 진동 효과를 설정합니다.
+    - `vibrator.vibrate(longArrayOf(0, 500, 1000, 500), -1)`를 사용하여 진동 패턴을 설정하고 진동을 발생시킵니다.
 
 ### 공식 문서
 
-- [RingtoneManager](https://developer.android.com/reference/android/media/RingtoneManager)
-- [Ringtone](https://developer.android.com/reference/android/media/Ringtone)
-- [Vibrator](https://developer.android.com/reference/android/os/Vibrator)
-- [VibrationEffect](https://developer.android.com/reference/android/os/VibrationEffect)
-- [VibratorManager](https://developer.android.com/reference/android/os/VibratorManager) (API 31 이상)
+    - [RingtoneManager](https://developer.android.com/reference/android/media/RingtoneManager)
+    - [Ringtone](https://developer.android.com/reference/android/media/Ringtone)
+    - [Vibrator](https://developer.android.com/reference/android/os/Vibrator)
+    - [VibrationEffect](https://developer.android.com/reference/android/os/VibrationEffect)
+    - [VibratorManager](https://developer.android.com/reference/android/os/VibratorManager) (API 31 이상)
 
 
 ## 알림
 
-알림(Notification)을 만드는 순서, 중요도 상수, 채널의 함수, 알림 구성 요소 등을 정리하겠습니다.
+    알림(Notification)을 만드는 순서, 중요도 상수, 채널의 함수, 알림 구성 요소 등을 정리하겠습니다.
 
 ### 1. 알림 만드는 순서
 
-1. 알림 채널 생성 (API 26 이상):
-    - 알림을 표시하기 위해서는 먼저 알림 채널을 생성해야 합니다.
-    - `NotificationChannel` 객체를 생성하고, 이를 `NotificationManager`를 통해 등록합니다.
-2. 알림 생성:
-    - `NotificationCompat.Builder`를 사용하여 알림을 생성합니다.
-    - 알림의 아이콘, 제목, 내용, 우선 순위 등을 설정합니다.
-3. 알림 표시:
-    - `NotificationManagerCompat`를 사용하여 알림을 표시합니다.
-    - `notify` 메서드를 호출하여 알림을 표시합니다.
-4. 권한 요청 (API 33 이상):
-    - **`POST_NOTIFICATIONS`** 권한을 요청해야 합니다.
-    - **`ActivityResultContracts.RequestPermission`**을 사용하여 권한을 요청합니다.
+    1. 알림 채널 생성 (API 26 이상):
+        - 알림을 표시하기 위해서는 먼저 알림 채널을 생성해야 합니다.
+        - `NotificationChannel` 객체를 생성하고, 이를 `NotificationManager`를 통해 등록합니다.
+    2. 알림 생성:
+        - `NotificationCompat.Builder`를 사용하여 알림을 생성합니다.
+        - 알림의 아이콘, 제목, 내용, 우선 순위 등을 설정합니다.
+    3. 알림 표시:
+        - `NotificationManagerCompat`를 사용하여 알림을 표시합니다.
+        - `notify` 메서드를 호출하여 알림을 표시합니다.
+    4. 권한 요청 (API 33 이상):
+        - **`POST_NOTIFICATIONS`** 권한을 요청해야 합니다.
+        - **`ActivityResultContracts.RequestPermission`**을 사용하여 권한을 요청합니다.
 
 ### 2. 채널의 함수
 
-- `createNotificationChannel(channel: NotificationChannel)`:
-    - `NotificationManager` 클래스의 메서드로, 알림 채널을 생성합니다.
-- `deleteNotificationChannel(channelId: String)`:
-    - 지정된 ID의 알림 채널을 삭제합니다.
-- `getNotificationChannel(channelId: String)`:
-    - 지정된 ID의 알림 채널을 반환합니다.
-- `getNotificationChannels()`:
-    - 모든 알림 채널의 목록을 반환합니다.
+    - `createNotificationChannel(channel: NotificationChannel)`:
+        - `NotificationManager` 클래스의 메서드로, 알림 채널을 생성합니다.
+    - `deleteNotificationChannel(channelId: String)`:
+        - 지정된 ID의 알림 채널을 삭제합니다.
+    - `getNotificationChannel(channelId: String)`:
+        - 지정된 ID의 알림 채널을 반환합니다.
+    - `getNotificationChannels()`:
+        - 모든 알림 채널의 목록을 반환합니다.
 
 ### 3. 알림 구성 요소
 
-- 알림 아이콘 (setSmallIcon):
-    - 알림의 아이콘을 설정합니다.
-    - 예: `builder.setSmallIcon(R.drawable.ic_notification)`
-- 알림 제목 (setContentTitle):
-    - 알림의 제목을 설정합니다.
-    - 예: `builder.setContentTitle("알림 제목")`
-- 알림 내용 (setContentText):
-    - 알림의 내용을 설정합니다.
-    - 예: `builder.setContentText("이것은 알림 내용입니다.")`
-- 알림 우선 순위 (setPriority):
-    - 알림의 우선 순위를 설정합니다.
-    - 예: `builder.setPriority(NotificationCompat.PRIORITY_DEFAULT)`
-- 알림 클릭 시 실행할 인텐트 (setContentIntent):
-    - 알림을 클릭했을 때 실행할 인텐트를 설정합니다.
-    - 예: `builder.setContentIntent(pendingIntent)`
-- 알림 클릭 시 자동 제거 (setAutoCancel):
-    - 알림을 클릭했을 때 자동으로 제거되도록 설정합니다.
-    - 예: `builder.setAutoCancel(true)`
+    - 알림 아이콘 (setSmallIcon):
+        - 알림의 아이콘을 설정합니다.
+        - 예: `builder.setSmallIcon(R.drawable.ic_notification)`
+    - 알림 제목 (setContentTitle):
+        - 알림의 제목을 설정합니다.
+        - 예: `builder.setContentTitle("알림 제목")`
+    - 알림 내용 (setContentText):
+        - 알림의 내용을 설정합니다.
+        - 예: `builder.setContentText("이것은 알림 내용입니다.")`
+    - 알림 우선 순위 (setPriority):
+        - 알림의 우선 순위를 설정합니다.
+        - 예: `builder.setPriority(NotificationCompat.PRIORITY_DEFAULT)`
+    - 알림 클릭 시 실행할 인텐트 (setContentIntent):
+        - 알림을 클릭했을 때 실행할 인텐트를 설정합니다.
+        - 예: `builder.setContentIntent(pendingIntent)`
+    - 알림 클릭 시 자동 제거 (setAutoCancel):
+        - 알림을 클릭했을 때 자동으로 제거되도록 설정합니다.
+        - 예: `builder.setAutoCancel(true)`
 
 ### 4. 중요도 상수 (Notification Importance Constants)
 
-알림의 중요도를 설정하는 데 사용되는 상수입니다. 중요도에 따라 알림이 사용자에게 표시되는 방식이 달라집니다.
+    알림의 중요도를 설정하는 데 사용되는 상수입니다. 중요도에 따라 알림이 사용자에게 표시되는 방식이 달라집니다.
 
-- `NotificationManager.IMPORTANCE_DEFAULT`:
-    - 기본 중요도입니다. 알림 소리가 나며, 상태바에 아이콘이 표시됩니다.
-- `NotificationManager.IMPORTANCE_HIGH`:
-    - 높은 중요도입니다. 알림 소리가 나며, 헤드업 알림으로 표시됩니다.
-- `NotificationManager.IMPORTANCE_LOW`:
-    - 낮은 중요도입니다. 알림 소리가 나지 않으며, 상태바에만 아이콘이 표시됩니다.
-- `NotificationManager.IMPORTANCE_MIN`:
-    - 최소 중요도입니다. 알림 소리가 나지 않으며, 상태바에도 아이콘이 표시되지 않습니다.
-- `NotificationManager.IMPORTANCE_MAX`:
-    - 매우 높은 중요도입니다. 알림 소리가 나며, 전체 화면 알림으로 표시될 수 있습니다.
+    - `NotificationManager.IMPORTANCE_DEFAULT`:
+        - 기본 중요도입니다. 알림 소리가 나며, 상태바에 아이콘이 표시됩니다.
+    - `NotificationManager.IMPORTANCE_HIGH`:
+        - 높은 중요도입니다. 알림 소리가 나며, 헤드업 알림으로 표시됩니다.
+    - `NotificationManager.IMPORTANCE_LOW`:
+        - 낮은 중요도입니다. 알림 소리가 나지 않으며, 상태바에만 아이콘이 표시됩니다.
+    - `NotificationManager.IMPORTANCE_MIN`:
+        - 최소 중요도입니다. 알림 소리가 나지 않으며, 상태바에도 아이콘이 표시되지 않습니다.
+    - `NotificationManager.IMPORTANCE_MAX`:
+        - 매우 높은 중요도입니다. 알림 소리가 나며, 전체 화면 알림으로 표시될 수 있습니다.
 
 ### 5. 코드 예제
 
@@ -933,7 +934,7 @@ customDialog.show()
 
 ```
 
-- 권한요청 코드
+    - 권한요청 코드
 
 ```kotlin
 
@@ -965,10 +966,10 @@ customDialog.show()
 
 ### 공식 문서 링크
 
-- Notifications Overview: [Notifications Overview](https://developer.android.com/guide/topics/ui/notifiers/notifications)
-- NotificationCompat.Builder: [NotificationCompat.Builder](https://developer.android.com/reference/androidx/core/app/NotificationCompat.Builder)
-- NotificationManager: [NotificationManager](https://developer.android.com/reference/android/app/NotificationManager)
-- NotificationChannel: [NotificationChannel](https://developer.android.com/reference/android/app/NotificationChannel)
+    - Notifications Overview: [Notifications Overview](https://developer.android.com/guide/topics/ui/notifiers/notifications)
+    - NotificationCompat.Builder: [NotificationCompat.Builder](https://developer.android.com/reference/androidx/core/app/NotificationCompat.Builder)
+    - NotificationManager: [NotificationManager](https://developer.android.com/reference/android/app/NotificationManager)
+    - NotificationChannel: [NotificationChannel](https://developer.android.com/reference/android/app/NotificationChannel)
 
 
 
