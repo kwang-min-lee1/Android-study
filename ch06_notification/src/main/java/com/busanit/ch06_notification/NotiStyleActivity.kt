@@ -186,4 +186,6 @@ class NotiStyleActivity : AppCompatActivity() {
         }
     }
 
+    //참고: Jetpack => https://developer.android.com/jetpack
+
 }
