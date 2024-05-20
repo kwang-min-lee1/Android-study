@@ -1259,4 +1259,38 @@ override fun onOptionsItemSelected(item: MenuItem): Boolean {
 - [Android Developers: Menus 추가](https://developer.android.com/develop/ui/views/components/menus?hl=ko)
 - [Android ActionBar 사용 가이드](https://developer.android.com/guide/topics/ui/actionbar)
 - [Material Design의 App Bar](https://material.io/components/app-bars-top)
+
+
+## Activity
+
+### 1.  Activity란
+
+Activity는 안드로이드 앱의 화면을 구성하는 기본 단위입니다. 각 Activity는 사용자와 상호작용하는 단일 화면을 나타냅니다.
+
+### 2. Activity 생명 주기(Life Cycle)
+
+Activity는 여러 상태를 거치며, 각각의 상태 전환 시 특정 콜백 메서드가 호출됩니다. 이를 Activity 생명 주기라고 합니다. 생명 주기를 이해하면 효율적으로 리소스를 관리하고 앱의 상태를 제어할 수 있습니다.
+
+### 주요 생명 주기 메서드
+
+1. onCreate()
+    - Activity가 처음 생성될 때 호출됩니다.
+    - 초기화 작업을 수행합니다. (예: UI 설정, 데이터 바인딩)
+2. onStart()
+    - Activity가 사용자에게 보이기 시작할 때 호출됩니다.
+3. onResume()
+    - Activity가 사용자와 상호작용하기 직전에 호출됩니다.
+4. onPause()
+    - 다른 Activity가 시작되려 할 때 호출됩니다.
+    - 데이터 저장 등 필요한 작업을 수행합니다.
+5. onStop()
+    - Activity가 더 이상 사용자에게 보이지 않을 때 호출됩니다.
+6. onDestroy()
+    - Activity가 소멸되기 직전에 호출됩니다.
+
+![Activity 생명주기](https://developer.android.com/images/activity_lifecycle.png)
+
+---
     
+
+
