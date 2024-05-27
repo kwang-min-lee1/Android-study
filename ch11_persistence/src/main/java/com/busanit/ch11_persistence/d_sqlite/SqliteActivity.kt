@@ -70,7 +70,7 @@ class SqliteActivity : AppCompatActivity() {
                        val id = getInt(getColumnIndexOrThrow("id"))
                        val name = getString(getColumnIndexOrThrow("name"))
                        val age =  getInt(getColumnIndexOrThrow("age"))
-                       stringBuilder.append("아이디: $id, 이름: &name, 나이: $age\n")
+                       stringBuilder.append("아이디: $id, 이름: $name, 나이: $age\n")
                     }
                 }
                 cursor.close()   // 리소스 정리
