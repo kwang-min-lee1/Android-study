@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id 'kotlin-kapt'   //kapt 추가
+    id 'kotlin-kapt'   // kapt 추가 (Room 적용)
 }
 
 android {
