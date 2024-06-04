@@ -2248,3 +2248,10 @@ val retrofit = Retrofit.Builder()
 ```
 
 ---
+
+![spring_security_arc1.jpg](..%2F..%2FDownloads%2Fspring_security_arc1.jpg)
+![spring_security_arc2.jpg](..%2F..%2FDownloads%2Fspring_security_arc2.jpg)
+![spring_security_arc3.png](..%2F..%2FDownloads%2Fspring_security_arc3.png)
+
+
+
