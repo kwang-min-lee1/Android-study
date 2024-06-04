@@ -1,10 +1,8 @@
 package com.busanit.ch12_network.retrofit.model
 
-// 데이터 클래스 정의
-data class Post(
+// POST 요청, 데이터를 추가하는 요청을 위한 클래스
+data class NewPost(
     val userId: Int,
     val title: String,
-    val id: Int,   // 식별자
     val body: String
-
 )

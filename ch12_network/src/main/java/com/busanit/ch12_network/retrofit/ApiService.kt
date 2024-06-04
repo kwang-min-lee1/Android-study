@@ -1,10 +1,13 @@
 package com.busanit.ch12_network.retrofit
 
 import com.busanit.ch12_network.retrofit.model.Comment
+import com.busanit.ch12_network.retrofit.model.NewPost
 import com.busanit.ch12_network.retrofit.model.Post
 
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -23,5 +26,9 @@ interface ApiService {
     @GET("/comments")
     fun getCommentsByPostId(@Query("postId") postId: Int):
             Call<List<Comment>>
+
+    // POST 요청, 요청 본문으로 데이터 객체를 받아,요청하고 post 객체를 반환
+    @POST("/posts")
+    fun createPost(@Body newPost: NewPost): Call<Post>
 
 }
