@@ -2254,4 +2254,131 @@ val retrofit = Retrofit.Builder()
 ![spring_security_arc3.png](..%2F..%2FDownloads%2Fspring_security_arc3.png)
 
 
+### Glide
+
+Glide는 이미지 로딩과 캐싱을 위해 강력하고 유연한 API를 제공하는 안드로이드 라이브러리입니다. 여기에서는 Glide의 주요 클래스와 메서드를 정리하였습니다.
+
+- [Gilde 공식문서](https://bumptech.github.io/glide/)
+
+- Glide: 이미지 로딩 및 캐싱 라이브러리의 진입점
+- RequestManager: 이미지 요청을 관리하는 클래스
+- RequestBuilder: 이미지 요청을 구성하는 클래스
+- RequestOptions: 이미지 요청에 대한 옵션을 설정하는 클래스
+- Target: 이미지를 로드할 대상
+
+#### 주요 클래스
+
+1. Glide
+    - Glide API의 진입점으로, 이미지를 로드하기 위한 다양한 정적 메서드를 제공합니다.
+
+2. RequestManager
+    - Glide의 이미지 요청을 관리하는 클래스입니다. Glide 인스턴스와 연관된 모든 요청을 시작하고 취소하는 역할을 합니다.
+
+3. RequestBuilder
+    - 이미지 요청을 구성하는 데 사용됩니다. URL, 파일, 리소스 등으로부터 이미지를 로드하고, 이미지의 크기, 변환, 캐싱 전략 등을 설정할 수 있습니다.
+
+4. RequestOptions
+    - 이미지 요청에 대한 다양한 옵션을 설정할 수 있습니다. 크기 조절, 변환, 플래이스홀더, 에러 이미지 등을 설정합니다.
+
+5. Target
+    - 이미지를 로드할 대상(예: ImageView)을 나타냅니다. Glide는 Target을 통해 이미지를 로드하고 표시합니다.
+
+
+#### 주요 메서드
+
+#### Glide 클래스의 메서드
+
+1. with()
+    - `Glide.with(Context context)`
+    - `Glide.with(Activity activity)`
+    - `Glide.with(Fragment fragment)`
+    - Glide를 시작하고 RequestManager를 반환합니다.
+
+##### RequestManager 클래스의 메서드
+
+1. load()
+    - `load(String url)`
+    - `load(File file)`
+    - `load(Uri uri)`
+    - `load(Integer resourceId)`
+    - 이미지를 로드할 소스를 지정합니다.
+
+2. asBitmap()
+    - 이미지를 Bitmap 형식으로 로드합니다.
+
+3. asGif()
+    - 이미지를 GIF 형식으로 로드합니다.
+
+##### RequestBuilder 클래스의 메서드
+
+1. apply()
+    - `apply(RequestOptions options)`
+    - RequestOptions을 적용하여 이미지 요청을 구성합니다.
+
+2. placeholder()
+    - `placeholder(Drawable drawable)`
+    - `placeholder(int resourceId)`
+    - 이미지를 로드하는 동안 표시할 플래이스홀더를 설정합니다.
+
+3. error()
+    - `error(Drawable drawable)`
+    - `error(int resourceId)`
+    - 이미지 로드 실패 시 표시할 에러 이미지를 설정합니다.
+
+4. override()
+    - `override(int width, int height)`
+    - 로드할 이미지의 크기를 설정합니다.
+
+5. transform()
+    - `transform(Transformation<Bitmap> transformation)`
+    - 이미지를 변환하는 데 사용됩니다. 예를 들어, 원형 크롭, 블러 효과 등을 적용할 수 있습니다.
+
+6. into()
+    - `into(ImageView view)`
+    - `into(Target<TranscodeType> target)`
+    - 이미지를 로드하고 대상(Target)에 표시합니다.
+
+#### RequestOptions 클래스의 메서드
+
+1. diskCacheStrategy()
+    - `diskCacheStrategy(DiskCacheStrategy strategy)`
+    - 디스크 캐싱 전략을 설정합니다. 예: `DiskCacheStrategy.ALL`, `DiskCacheStrategy.NONE`
+
+2. skipMemoryCache()
+    - `skipMemoryCache(boolean skip)`
+    - 메모리 캐싱을 건너뛰는지 여부를 설정합니다.
+
+3. centerCrop()
+    - 이미지를 가운데 크롭하여 ImageView에 맞춥니다.
+
+4. circleCrop()
+    - 이미지를 원형으로 크롭하여 ImageView에 맞춥니다.
+
+5. fitCenter()
+    - 이미지를 중앙에 맞추어 ImageView에 표시합니다.
+
+6. priority()
+    - `priority(Priority priority)`
+    - 이미지 로드의 우선순위를 설정합니다. 예: `Priority.HIGH`, `Priority.LOW`
+
+### 예제 코드
+
+```kotlin
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.load.resource.bitmap.CircleCrop
+
+val imageUrl = "https://via.placeholder.com/300.png"
+
+Glide.with(this)
+    .load(imageUrl) // 이미지 URL 설정
+    .apply(RequestOptions()
+        .placeholder(R.drawable.placeholder) // 플래이스홀더 이미지 설정
+        .error(R.drawable.error) // 에러 이미지 설정
+        .override(200, 200) // 이미지 크기 설정
+        .transform(CircleCrop()) // 원형 크롭 변환 적용
+    )
+    .into(binding.imageView) // 이미지뷰에 이미지 로드
+```
+
 
