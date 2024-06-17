@@ -76,36 +76,73 @@ class MainActivity : AppCompatActivity() {
         }
 
         autoPromptButton1.setOnClickListener {
-            val userInfo = UserPreferences.getUserInfo(this)
-            val prompt = UserPreferences.createPrompt1(userInfo)
-            userInput.setText(prompt)
+            try {
+                val userInfo = UserPreferences.getUserInfo(this)
+                val prompt = UserPreferences.createPrompt1(userInfo)
+
+                // 로그 추가
+                Log.d("AutoPrompt1", "Prompt: $prompt")
+
+                userInput.setText(prompt)
+            } catch (e: Exception) {
+                Log.e("AutoPrompt1", "Error: ${e.message}")
+                e.printStackTrace()
+            }
             // sendMessageToChatGPT(prompt)
         }
 
         autoPromptButton2.setOnClickListener {
-            val userInfo = UserPreferences.getUserInfo(this)
-            val prompt = UserPreferences.createPrompt2(userInfo)
-            userInput.setText(prompt)
+            try {
+                val userInfo = UserPreferences.getUserInfo(this)
+                val prompt = UserPreferences.createPrompt2(userInfo)
+
+                // 로그 추가
+                Log.d("AutoPrompt2", "Prompt: $prompt")
+
+                userInput.setText(prompt)
+            } catch (e: Exception) {
+                Log.e("AutoPrompt2", "Error: ${e.message}")
+                e.printStackTrace()
+            }
             // sendMessageToChatGPT(prompt)
         }
 
         autoPromptButton3.setOnClickListener {
-            val userInfo = UserPreferences.getUserInfo(this)
-            val prompt = UserPreferences.createPrompt3(userInfo)
-            userInput.setText(prompt)
+            try {
+                val userInfo = UserPreferences.getUserInfo(this)
+                val prompt = UserPreferences.createPrompt3(userInfo)
+
+                // 로그 추가
+                Log.d("AutoPrompt3", "Prompt: $prompt")
+
+                userInput.setText(prompt)
+            } catch (e: Exception) {
+                Log.e("AutoPrompt3", "Error: ${e.message}")
+                e.printStackTrace()
+            }
             // sendMessageToChatGPT(prompt)
         }
 
         autoPromptButton4.setOnClickListener {
-            val userInfo = UserPreferences.getUserInfo(this)
-            val prompt = UserPreferences.createPrompt4(userInfo)
-            userInput.setText(prompt)
+            try {
+                val userInfo = UserPreferences.getUserInfo(this)
+                val prompt = UserPreferences.createPrompt4(userInfo)
+
+                // 로그 추가
+                Log.d("AutoPrompt4", "Prompt: $prompt")
+
+                userInput.setText(prompt)
+            } catch (e: Exception) {
+                Log.e("AutoPrompt4", "Error: ${e.message}")
+                e.printStackTrace()
+            }
             // sendMessageToChatGPT(prompt)
         }
 
         clearButton.setOnClickListener {
             userInput.text.clear()
             chatResponse.text = "" // 결과 창의 내용을 지운다.
+            errorMessage.visibility = View.INVISIBLE
         }
 
         backButton.setOnClickListener {
