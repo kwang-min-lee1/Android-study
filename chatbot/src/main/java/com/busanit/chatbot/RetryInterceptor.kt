@@ -6,7 +6,7 @@ import java.io.IOException
 
 // 네트워크 상태가 불안정할 때 재시도 메커니즘을 추가하여 요청을 재시도
 class RetryInterceptor(private val maxRetry: Int) : Interceptor {
-    private var retryCount = 0
+    private var retryCount = 3
 
     override fun intercept(chain: Interceptor.Chain): Response {
         var response: Response
