@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // API Key를 로그로 출력
+        Log.d("API_KEY_LOG", "API Key: ${BuildConfig.API_KEY}")
+
         userInput = findViewById(R.id.userInput)
         sendButton = findViewById(R.id.sendButton)
         autoPromptButton1 = findViewById(R.id.autoPromptButton1)
@@ -49,7 +52,11 @@ class MainActivity : AppCompatActivity() {
         errorMessage = findViewById(R.id.errorMessage)
 
         sendButton.setOnClickListener {
+            // 추가로 버튼 클릭 시에도 로그 출력 (필요시)
+            Log.d("API_KEY_LOG", "Button clicked - API Key: ${BuildConfig.API_KEY}")
+
             val userMessage = userInput.text.toString()
+
 
             // chatResponse.text = "요청중"
 
@@ -125,7 +132,7 @@ class MainActivity : AppCompatActivity() {
         loadingIndicator.visibility = View.VISIBLE // 로딩 인디케이터 표시
         loadingTextView.visibility = View.VISIBLE // 요청중 표시
 
-        val apiService = NetworkModule.retrofit.create(OpenAIService::class.java)
+        val apiService = ApiClient.retrofit.create(OpenAIService::class.java)
         val request = ChatRequest(
             model = "gpt-4",
             messages = listOf(Message(role = "user", content = message))
