@@ -7,7 +7,7 @@ import retrofit2.http.POST
 
 // Retrofit API 인터페이스 정의 (OpenAIService.kt)
 interface OpenAIService {
-    @Headers("Authorization: Bearer APIKEY")
+    @Headers("Authorization: Bearer Api")
     @POST("v1/chat/completions")
     fun getChatResponse(@Body request: ChatRequest): Call<ChatResponse>
 }
