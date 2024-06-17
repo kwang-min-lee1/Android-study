@@ -1,8 +1,29 @@
+
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 
 }
+
+
+val properties = Properties().apply {
+    load(FileInputStream(rootProject.file("local.properties")))
+}
+
+//val properties = Properties()
+//properties.load(FileInputStream(rootProject.file("local.properties")))
+
+
+fun getApiKey(propertyKey: String): String {
+    return properties.getProperty(propertyKey)
+}
+
+//fun getApiKey(propertyKey: String): String {
+//    return properties.getProperty("api.key")
+//}
 
 android {
     namespace = "com.busanit.chatbot"
@@ -16,6 +37,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "API_KEY", "\"${getApiKey("api.key")}\"")
+        // buildConfigField("String", "api_key", getApiKey("api.key"))
     }
 
     buildTypes {
@@ -36,6 +59,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 

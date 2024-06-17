@@ -125,7 +125,7 @@ class MainActivity : AppCompatActivity() {
         loadingIndicator.visibility = View.VISIBLE // 로딩 인디케이터 표시
         loadingTextView.visibility = View.VISIBLE // 요청중 표시
 
-        val apiService = ApiClient.retrofit.create(OpenAIService::class.java)
+        val apiService = NetworkModule.retrofit.create(OpenAIService::class.java)
         val request = ChatRequest(
             model = "gpt-4",
             messages = listOf(Message(role = "user", content = message))
